@@ -1,4 +1,4 @@
-package com.andymartinez1.notes.models;
+package com.andymartinez1.notes.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,8 +11,8 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Lob
     private String content;
 
     private String ownerUsername;
+
 }

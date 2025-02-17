@@ -5,3 +5,18 @@ spring:
     user:
       name: user
       password: password
+  datasource:
+    url: jdbc:mysql://localhost:3306/secure_notes
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
