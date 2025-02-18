@@ -15,12 +15,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "password",
+							"value": "password1",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "user",
+							"value": "user1",
 							"type": "string"
 						}
 					]
@@ -34,7 +34,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"content\": \"Your note content here\"\r\n}"
+					"raw": "{\r\n    \"content\": \"Test\"\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/notes",
@@ -59,12 +59,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "password",
+							"value": "password1",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "user",
+							"value": "user1",
 							"type": "string"
 						}
 					]
