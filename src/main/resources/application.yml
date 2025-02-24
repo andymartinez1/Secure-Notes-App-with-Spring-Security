@@ -17,6 +17,9 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQLDialect
+  app:
+    jwtSecret: mySecretKeyString5xh4156dfghn56g4dfbhn13251dfgcb
+    jwtExpirationMs: 172800000
 
 logging:
   level:
