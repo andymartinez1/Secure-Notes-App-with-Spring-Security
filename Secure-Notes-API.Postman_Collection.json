@@ -377,6 +377,9 @@
 				{
 					"name": "Signin",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -386,7 +389,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"username\": \"admin\", \"password\": \"adminPass\"}"
+							"raw": "{\r\n    \"username\": \"tester\",\r\n    \"password\": \"tester1\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/api/auth/public/signin",
@@ -400,6 +403,108 @@
 								"auth",
 								"public",
 								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"tester\",\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"tester1\",\r\n    \"role\": [\r\n        \"user\"\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/public/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"public",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZXIiLCJpYXQiOjE3NDA0NDE5NzcsImV4cCI6MTc0MDYxNDc3N30.wcu9lRov43zrCn83Xpg6G0iK9__xJU0-kFvy2C1THwM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Username",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZXIiLCJpYXQiOjE3NDA0NDE5NzcsImV4cCI6MTc0MDYxNDc3N30.wcu9lRov43zrCn83Xpg6G0iK9__xJU0-kFvy2C1THwM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/auth/username",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"username"
 							]
 						}
 					},
