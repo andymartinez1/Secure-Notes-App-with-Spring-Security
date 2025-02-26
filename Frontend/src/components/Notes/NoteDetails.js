@@ -4,14 +4,13 @@ import api from "../../services/api";
 import "react-quill/dist/quill.snow.css";
 import { Blocks } from "react-loader-spinner";
 import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 import { DataGrid } from "@mui/x-data-grid";
 import Buttons from "../../utils/Buttons";
 import Errors from "../Errors";
 import toast from "react-hot-toast";
 import Modals from "../PopModal";
-//importing the the columns from the auditlogs
+//importing the the columns from the audit logs
 import { auditLogscolumn } from "../../utils/tableColumn";
 
 const NoteDetails = () => {

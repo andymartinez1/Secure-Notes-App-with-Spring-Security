@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
   FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 //import aboutImage from "./path/to/your/image.jpg"; // Add your image path here
 
 const AboutPage = () => {
   return (
-    <div className=" p-8   bg-gray-100 min-h-screen">
+    <div className=" p-8 bg-gray-100 min-h-screen text-center md:flex justify-center">
       <div className="md:w-1/2">
         <h1 className="text-4xl font-bold mb-4">About Us</h1>
         <p className="mb-4">
@@ -38,7 +38,8 @@ const AboutPage = () => {
             Our app is designed to be intuitive and easy to use.
           </li>
         </ul>
-        <div className="flex space-x-4 mt-10">
+
+        <div className="flex space-x-4 mt-10 justify-center">
           <Link className="text-white rounded-full p-2 bg-customRed  " to="/">
             <FaFacebookF size={24} />
           </Link>

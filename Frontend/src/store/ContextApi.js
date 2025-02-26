@@ -1,7 +1,6 @@
-import React, { createContext, useContext, useState } from "react";
-import { useEffect } from "react";
-import api from "../services/api";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import api from "../services/api";
 
 const ContextApi = createContext();
 
@@ -18,11 +17,11 @@ export const ContextProvider = ({ children }) => {
   //store the token
   const [token, setToken] = useState(getToken);
 
-  //store the current loggedin user
+  //store the current logged in user
   const [currentUser, setCurrentUser] = useState(null);
   //handle sidebar opening and closing in the admin panel
   const [openSidebar, setOpenSidebar] = useState(true);
-  //check the loggedin user is admin or not
+  //check the logged in user is admin or not
   const [isAdmin, setIsAdmin] = useState(isADmin);
 
   const fetchUser = async () => {
@@ -55,7 +54,7 @@ export const ContextProvider = ({ children }) => {
     }
   }, [token]);
 
-  //through context provider you are sending all the datas so that we access at anywhere in your application
+  //through context provider you are sending all the data so that we access at anywhere in your application
   return (
     <ContextApi.Provider
       value={{
@@ -74,7 +73,7 @@ export const ContextProvider = ({ children }) => {
   );
 };
 
-//by using this (useMyContext) custom hook we can reach our context provier and access the datas across our components
+//by using this (useMyContext) custom hook we can reach our context provider and access the data across our components
 export const useMyContext = () => {
   const context = useContext(ContextApi);
 

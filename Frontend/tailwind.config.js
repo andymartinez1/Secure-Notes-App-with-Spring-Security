@@ -28,7 +28,7 @@ module.exports = {
       fontSize: {
         logoText: "30px",
         customText: "15px",
-        tablehHeaderText: "16px",
+        tableHeaderText: "16px",
         headerText: ["50px", "60px"],
         tableHeader: ["15px", "25px"],
       },

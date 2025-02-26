@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import api from "../../services/api";
-import { useForm } from "react-hook-form";
-import InputField from "../InputField/InputField";
-import Buttons from "../../utils/Buttons";
 import { Divider } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import api from "../../services/api";
 import { useMyContext } from "../../store/ContextApi";
+import Buttons from "../../utils/Buttons";
+import InputField from "../InputField/InputField";
 
 const ForgotPassword = () => {
   const [loading, setLoading] = useState(false);
